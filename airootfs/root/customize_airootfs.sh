@@ -11,11 +11,7 @@ locale-gen
 
 sed -i "s/#Server/Server/g" /etc/pacman.d/mirrorlist
 
-groupadd liveuser
-useradd -g liveuser -M liveuser -s /bin/bash
-passwd -d liveuser
-echo "liveuser ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers;
+echo "gate ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers;
 
-systemctl enable lightdm
-systemctl enable lightdm.service
+systemctl enable lxdm.service
 systemctl enable graphical.target

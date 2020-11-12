@@ -1,7 +1,6 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
-lightdm
-lightdm-gtk-greeter
+lxdm
 alsa-utils
 amd-ucode
 arch-install-scripts
