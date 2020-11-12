@@ -1,6 +1,8 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
+ttf-dejavu
 lxdm
+xfce4
 alsa-utils
 amd-ucode
 arch-install-scripts

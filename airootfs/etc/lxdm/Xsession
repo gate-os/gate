@@ -1,8 +1,15 @@
 #!/bin/sh
 #
-# LightDM wrapper to run around X sessions.
+# LXDM wrapper to run around X sessions.
 
 echo "Running X session wrapper"
+
+if [ $# -eq 1 -a -n "$1" ]; then
+	LXSESSION=$1
+else
+# default session
+	LXSESSION=/usr/bin/startlxde
+fi
 
 # Load profile
 for file in "/etc/profile" "$HOME/.profile" "/etc/xprofile" "$HOME/.xprofile"; do
@@ -59,6 +66,6 @@ if [ -x "$script" -a ! -d "$script" ]; then
     . "$script"
 fi
 
-echo "X session wrapper complete, running session $@"
+echo "X session wrapper complete, running session $LXSESSION"
 
-exec $@
+exec $LXSESSION
