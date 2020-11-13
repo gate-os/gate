@@ -13,5 +13,10 @@ sed -i "s/#Server/Server/g" /etc/pacman.d/mirrorlist
 
 echo "gate ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers;
 
+#create keyring
+sudo pacman-key --init
+#load official dev keys into pacman-keyring
+sudo pacman-key --populate archlinux
+
 systemctl enable lxdm.service
 systemctl enable graphical.target
