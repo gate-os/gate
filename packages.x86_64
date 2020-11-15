@@ -1,8 +1,13 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
+xmount
+afflib
+libewf
+fuse
 ttf-dejavu
 lxdm
 xfce4
+xfce4-goodies
 alsa-utils
 amd-ucode
 arch-install-scripts
