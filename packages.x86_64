@@ -1,5 +1,8 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
+gvfs
+udisks2
+thunar-volman
 nmap
 cyberchef-electron
 guymager

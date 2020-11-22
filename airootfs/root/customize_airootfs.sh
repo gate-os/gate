@@ -13,6 +13,8 @@ sed -i "s/#Server/Server/g" /etc/pacman.d/mirrorlist
 
 echo "gate ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers;
 
+echo "KERNEL==\"sd*\", SUBSYSTEMS==\"usb\", MODE=\"0555\"" > /etc/udev/rules.d/25-usb-read-only.rules
+
 #create keyring
 sudo pacman-key --init
 #load official dev keys into pacman-keyring
