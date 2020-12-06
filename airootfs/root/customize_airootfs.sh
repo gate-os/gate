@@ -22,3 +22,4 @@ sudo pacman-key --populate archlinux
 
 systemctl enable lxdm.service
 systemctl enable graphical.target
+systemctl enable NetworkManager
